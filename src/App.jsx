@@ -10,7 +10,7 @@ function App() {
     if (!input.trim()) return alert("Please enter a product description!");
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/recommend", {
+      const response = await fetch("https://backend-productrecommendat.onrender.com/recommend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ input, products }),
